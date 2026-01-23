@@ -159,6 +159,3 @@ npm run build
 
 The production build will be in the `Frontend/dist` directory.
 
-## License
-
-ISC
