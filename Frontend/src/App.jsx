@@ -10,9 +10,11 @@ import { useEffect } from 'react';
 import { Loader } from 'lucide-react';
 import { Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
+import { useThemeStore } from './store/useThemeStore';
 
 function App() {
   const { authUser, checkAuth, isAuthenticated } = useAuthStore();
+  const { theme } = useThemeStore();
   
   // Check authentication on component mount
   useEffect(() => {
@@ -28,7 +30,7 @@ function App() {
   }
   
   return (
-    <div>
+    <div className={theme}>
       <Navbar />
 
       <Routes>
