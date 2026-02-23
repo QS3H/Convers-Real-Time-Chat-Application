@@ -21,6 +21,11 @@ function App() {
     checkAuth();
   }, [checkAuth]);
 
+  // Apply theme to document element
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
   if (isAuthenticated && !authUser) {
     return (
       <div className="flex items-center justify-center h-screen">
@@ -30,7 +35,7 @@ function App() {
   }
   
   return (
-    <div className={theme}>
+    <div>
       <Navbar />
 
       <Routes>
