@@ -62,7 +62,7 @@ const ChatContainer = () => {
                       ? authUser.profilePicture || "/avatar.png"
                       : selectedUser.profilePicture || "/avatar.png"
                   }
-                  alt="profile pic"
+                  alt="profile picture"
                 />
               </div>
             </div>
